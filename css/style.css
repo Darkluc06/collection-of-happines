@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0rem 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+}
+.title__logo {
+  width: 5rem;
+  aspect-ratio: 1/1;
+}
+.title__logo > i {
+  width: 100%;
+  height: 100%;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes buttonHover {
+  from {
+    border-radius: 0rem 2rem 0 2rem;
+  }
+  to {
+    border-radius: 2rem 0 2rem 0;
+  }
+}
+.happines {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.happines__list {
+  padding: 5rem;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  gap: 2rem;
+}
+.happines__listItem {
+  width: 80%;
+  height: calc(100% - 5rem);
+  display: flex;
+}
+.happines__image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.happines__imageSmall {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+.happines__imageLarge {
+  height: 55rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.happines__mainImage {
+  height: 30rem;
+  position: relative;
+}
+.happines__text {
+  margin: 1rem;
+  position: absolute;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+}
+.happines__text--date {
+  right: 0;
+  top: 0;
+}
+.happines__text--title {
+  bottom: 0;
+  left: 0;
+}
+.happines__right {
+  padding: 5rem;
+  padding-bottom: 0;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.happines__article {
+  display: flex;
+  flex-direction: column;
+}
+.happines__articleText {
+  padding: 2rem;
+}
+.happines__button {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 10rem;
+  font-size: 100%;
+  font-weight: 500;
+}
+.happines__buttonBorder {
+  all: unset;
+  background: black;
+  height: 100%;
+  width: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0rem 2rem 0 2rem;
+  gap: 2rem;
+  cursor: pointer;
+}
+.happines__buttonBorder:hover {
+  animation-name: buttonHover;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation-fill-mode: both;
+}
+.happines__audio {
+  color: white;
+}
+.happines__audio--figure {
+  color: white;
+}
+.happines__source {
+  all: unset;
+  cursor: pointer;
+  font-size: 200%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 75rem) {
+  .happines {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .happines__list {
+    padding: 0;
+    place-items: center;
+    gap: 0;
+  }
+  .happines__button {
+    flex-direction: column;
+    height: 15rem;
+    gap: 2rem;
+  }
+  .happines__buttonBorder {
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  body {
+    gap: 2rem;
+  }
+  .title {
+    height: 10rem;
+  }
+  .happines__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .happines__right {
+    padding: 2rem;
+  }
+  .happines__articleText {
+    padding: 1rem;
+  }
+  .happines__buttonBorder {
+    width: 10rem;
+    border-radius: 10rem;
+  }
+  .happines__buttonBorder:hover {
+    animation-name: "";
+  }
+  .happines__audio {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

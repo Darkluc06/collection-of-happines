@@ -1,0 +1,61 @@
+@media screen and (max-width: 75rem){
+    .happines{
+        display: flex;
+        flex-direction: column-reverse;
+
+        &__list{
+            padding: 0;
+            place-items: center;
+            gap: 0;
+        }
+
+        &__button{
+            flex-direction: column;
+            height: 15rem;
+            gap: 2rem;
+            &Border{
+                height: 10rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 37.5rem){
+    body{
+        gap: 2rem;
+    }
+
+    .title{
+        height: 10rem;
+    }
+    .happines{
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        &__right{
+            padding: 2rem;
+        }
+
+        &__articleText{
+            padding: 1rem;
+
+        }
+
+        &__button{
+            &Border{
+                width: 10rem;
+                border-radius: 10rem;
+                &:hover{
+                    animation-name: "";
+                }
+            }
+
+        }
+        &__audio{
+            display: none;
+        }
+    }
+}

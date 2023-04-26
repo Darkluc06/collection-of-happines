@@ -1,0 +1,116 @@
+@use "../abstract/animations";
+.happines{
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__left{
+    }
+    &__list{
+        padding: 5rem;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 2rem;
+        &Item{
+            width: 80%;
+            height: calc(100% - 5rem);
+            display: flex;
+            
+        }
+    }
+    &__image{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        &Small{
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
+        }
+        &Large{
+            height: 55rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    &__mainImage{
+        height: 30rem;
+        position: relative;
+    }
+
+    &__text{
+        margin: 1rem;
+        position: absolute;
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 0.5rem;
+        &--date{
+            right: 0;
+            top: 0;
+        }
+        &--title{
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+
+    &__right{
+        padding: 5rem;
+        padding-bottom: 0;
+        gap: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__article{
+        display: flex;
+        flex-direction: column;
+        &Text{
+            padding: 2rem;
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        height: 10rem;
+        font-size: 100%;
+        font-weight: 500;
+        &Border{
+            all: unset;
+            background: black;
+            height: 100%;
+            width: 35rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0rem 2rem 0 2rem;
+            gap: 2rem;
+            cursor: pointer;
+            &:hover{
+                @include animations.buttonHoverMixin;
+            }
+        }
+    }
+    &__audio{
+        
+        color: white;
+
+        &--figure{
+            color: white;
+        }
+    }
+    &__source{
+        all: unset;
+        cursor: pointer;
+        font-size: 200%;
+    }
+
+}
