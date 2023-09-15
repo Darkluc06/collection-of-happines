@@ -306,7 +306,7 @@ class App {
     header;
     main;
     constructor() {
-        this.getData = new GetData("../data/data.json");
+        this.getData = new GetData("./data/data.json");
         this.header = new Header();
         this.footer = new Footer();
         this.header.render();
